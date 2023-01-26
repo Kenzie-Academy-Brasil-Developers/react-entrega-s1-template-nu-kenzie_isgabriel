@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+// import { useState } from "react";
+// import "./App.css";
+// import { Form } from "./components/Form";
 
-function App() {
-  const [count, setCount] = useState(0)
+// function App() {
+//     const [listTransactions, setListTransactions] = useState([
+//         { description: "Salário recebido", type: "entrada", value: 2500 },
+//         { description: "Conta de luz", type: "saída", value: -150 },
+//     ]);
+//     return (
+//         <main>
+//             {/* <Header />
+//             <Form />
+//             <TotalMoney />
+//             <List />
+//             <Card /> */}
+//             <Form />
+//         </main>
+//     );
+// }
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+// export default App;
+import { useState } from "react";
+import "./App.css";
+import { Dashboard } from "./components/Dashboard/Dashboard";
+// import { Dashboard } from "./components/Dashboard";
+// import { Home } from "./components/Home";
 
-export default App
+export const App = () => {
+    const [start, setStart] = useState(true);
+    return (
+        <div className="App">
+            <Dashboard />
+            {/* {start ? (
+                <Dashboard setStart={setStart} />
+            ) : (
+                console.log(<Dashboard />)
+            )} */}
+            {/* {start ? (
+                <Home setStart={setStart} />
+            ) : (
+                <Dashboard setStart={setStart} />
+            )} */}
+        </div>
+    );
+};
