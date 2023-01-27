@@ -1,0 +1,23 @@
+.divTotalCart {
+    padding: 38px 25px;
+    border: 1px solid var(--Grey-2);
+}
+.divTotalCart__description {
+    display: flex;
+    justify-content: space-between;
+}
+.divTotalCart__description--title {
+    font-weight: var(--Bold);
+    font-size: var(--Title3);
+}
+.divTotalCart__description--value {
+    font-weight: var(--Bold);
+    font-size: var(--Headline);
+
+    color: var(--Color-primary);
+}
+.divTotalCart--span {
+    font-weight: var(--Regular);
+    font-size: var(--Body);
+    margin-top: 10px;
+}

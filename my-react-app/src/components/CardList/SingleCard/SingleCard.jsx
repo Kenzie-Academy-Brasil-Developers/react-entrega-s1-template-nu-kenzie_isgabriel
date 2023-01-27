@@ -1,9 +1,9 @@
 import { FaTrash } from "react-icons/fa";
-// import "./singleCard.css";
+import "./singleCard.css";
 
 export function SingleCard({ transition, removeTransition }) {
     return (
-        <li>
+        <li className="list__item">
             <div className="type">
                 {transition.type === "entrada" ? (
                     <div className="type-entrada"></div>
@@ -11,17 +11,26 @@ export function SingleCard({ transition, removeTransition }) {
                     <div className="type-saida"></div>
                 )}
             </div>
-            <div>
-                <h2>{transition.description}</h2>
-                <p>{transition.value}</p>
-            </div>
-            <div>
-                <span>R$ {transition.type}</span>
-                <button
-                    onClick={(e) => removeTransition(transition.description)}
-                >
-                    <FaTrash />
-                </button>
+            <div className="itemInfosDiv">
+                <div className="salaryValue__div">
+                    <h2 className="salaryValue__div--title">
+                        {transition.description}
+                    </h2>
+                    <p className="salaryValue__div--type">{transition.type}</p>
+                </div>
+                <div className="typeValueResume__div">
+                    <span className="typeValueResume__div--value">
+                        {`R$ ${transition.value}`}
+                    </span>
+                    <button
+                        onClick={(e) =>
+                            removeTransition(transition.description)
+                        }
+                        className="btnTrash"
+                    >
+                        <FaTrash className="btnTrashIcon" />
+                    </button>
+                </div>
             </div>
         </li>
     );
