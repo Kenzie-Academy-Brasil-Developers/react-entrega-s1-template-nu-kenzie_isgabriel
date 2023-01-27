@@ -1,0 +1,15 @@
+.container__indexPage {
+    min-height: 100vh;
+    padding: 0 15px;
+    background-color: var(--Grey-4);
+}
+
+@media (min-width: 500px) {
+    .container__indexPage {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+    }
+}
