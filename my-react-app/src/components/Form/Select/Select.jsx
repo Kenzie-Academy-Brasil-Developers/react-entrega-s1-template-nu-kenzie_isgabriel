@@ -1,5 +1,4 @@
 import React from "react";
-// import "./select.css";
 
 export function Select({ type, setType }) {
     return (

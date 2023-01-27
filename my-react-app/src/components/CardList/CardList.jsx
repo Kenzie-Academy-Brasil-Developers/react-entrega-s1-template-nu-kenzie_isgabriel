@@ -1,26 +1,20 @@
 import React from "react";
 import { SingleCard } from "./SingleCard/SingleCard";
+import NoCard from "../../assets/NoCard.svg";
 import "./cardList.css";
 
 export function CardList({ setFiltered, filteredList, removeTransition }) {
     return (
-        <ul>
-            <div>
-                <h2>Resumo financeiro</h2>
-                <div>
-                    <button onClick={() => setFiltered("todos")}>Todos</button>
-                    <button onClick={() => setFiltered("entrada")}>
-                        Entradas
-                    </button>
-                    <button onClick={() => setFiltered("saída")}>
-                        Despesas
-                    </button>
-                </div>
+        <ul className="list__cards">
+            <div className="financeResume__div">
+                <h2 className="financeResume__div--title">Resumo financeiro</h2>
             </div>
             {filteredList <= 0 ? (
-                <div>
-                    <p>Você ainda não possui nenhum lançamento</p>
-                    <img src="../../src/assets/NoCard.svg" alt="" />
+                <div className="noListDiv">
+                    <p className="noListFilter--title">
+                        Você ainda não possui nenhum lançamento
+                    </p>
+                    <img src={NoCard} className="cardLoading" />
                 </div>
             ) : (
                 filteredList.map((transition, index) => (

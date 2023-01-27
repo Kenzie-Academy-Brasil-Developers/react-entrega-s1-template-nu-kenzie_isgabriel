@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { CardList } from "../CardList/CardList";
 import { Form } from "../Form/Inputs/Inputs";
-import { Total } from "../Form/Total/Total";
+import { TotalMoney } from "../Form/Total/Total";
 import { Header } from "../Header/Header";
+import "./dashboard.css";
 
 export function Dashboard({ setStart }) {
     const [listTransactions, setListTransactions] = useState([]);
@@ -22,12 +23,12 @@ export function Dashboard({ setStart }) {
     return (
         <>
             <Header setStart={setStart} />
-            <main>
-                <section>
+            <main className="main__container">
+                <section className="form__container">
                     <Form setListTransactions={setListTransactions} />
-                    <Total filteredList={filteredList} />
+                    <TotalMoney filteredList={filteredList} />
                 </section>
-                <section>
+                <section className="card__section">
                     <CardList
                         setFiltered={setFiltered}
                         filteredList={filteredList}

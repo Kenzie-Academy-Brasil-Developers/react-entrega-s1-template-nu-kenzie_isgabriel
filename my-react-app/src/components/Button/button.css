@@ -1,0 +1,30 @@
+.btnStyle,
+.primaryBtn {
+    cursor: pointer;
+
+    margin-top: 28px;
+    padding: 14.5px;
+
+    background-color: var(--Color-primary);
+    color: var(--Grey-1);
+
+    font-size: var(--Headline);
+    font-weight: var(--Regular);
+
+    border-radius: var(--Radius-default);
+    border: none;
+}
+.primaryBtn:hover,
+.btnStyle:hover {
+    transition: 0.5s;
+    background-color: var(--Color-primary-2);
+}
+.btnStyle {
+    width: 100%;
+}
+
+@media (min-width: 500px) {
+    .btnStyle {
+        max-width: 241px;
+    }
+}

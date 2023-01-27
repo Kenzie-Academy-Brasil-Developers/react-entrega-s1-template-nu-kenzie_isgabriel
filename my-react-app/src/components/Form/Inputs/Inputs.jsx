@@ -1,7 +1,6 @@
 import { ButtonPrimary } from "../../Button/Button";
 import { useState } from "react";
 import { Select } from "../Select/Select";
-// import "./inputs.css";
 
 export function Form({ setListTransactions }) {
     const [description, setDescription] = useState("");
@@ -30,9 +29,11 @@ export function Form({ setListTransactions }) {
         }
     }
     return (
-        <form onSubmit={makeTransition}>
-            <div>
-                <label htmlFor="description">Descrição</label>
+        <form onSubmit={makeTransition} className="form">
+            <div className="divDescription">
+                <label htmlFor="description" className="descLabel">
+                    Descrição
+                </label>
                 <input
                     type="text"
                     name="description"
@@ -42,27 +43,35 @@ export function Form({ setListTransactions }) {
                     placeholder="Digite aqui sua descrição"
                     required
                 />
-                <p>Ex: Compra de roupas</p>
+                <p className="exampleInput">Ex: Compra de roupas</p>
             </div>
 
-            <div>
-                <label htmlFor="value">Valor</label>
-                <input
-                    type="text"
-                    name="value"
-                    id="value"
-                    value={value}
-                    onChange={(event) => setValue(Number(event.target.value))}
-                    placeholder="1"
-                    required
-                />
-                <p>R$</p>
+            <div className="divValueAndType">
+                <div className="divTypeValue">
+                    <label htmlFor="value" className="descLabel">
+                        Valor
+                    </label>
+                    <input
+                        type="text"
+                        name="value"
+                        id="value"
+                        value={value}
+                        onChange={(event) =>
+                            setValue(Number(event.target.value))
+                        }
+                        placeholder="1"
+                        required
+                    />
+                    <p className="typeOfCash">R$</p>
+                </div>
+                <div className="divTypeValue">
+                    <label htmlFor="tipeValue" className="descLabel">
+                        Tipo de valor
+                    </label>
+                    <Select type={type} setType={setType} />
+                </div>
             </div>
-            <div>
-                <label htmlFor="tipeValue">Tipo de valor</label>
-                <Select type={type} setType={setType} />
-                <ButtonPrimary>Inserir valor</ButtonPrimary>
-            </div>
+            <ButtonPrimary className="btnStyle">Inserir valor</ButtonPrimary>
         </form>
     );
 }

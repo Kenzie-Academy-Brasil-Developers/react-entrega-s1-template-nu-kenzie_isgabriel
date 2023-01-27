@@ -1,0 +1,126 @@
+.main__container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form__container {
+    width: 90%;
+    max-width: 363px;
+
+    margin-top: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.form {
+    padding: 38px 25px;
+
+    border: 1px solid var(--Grey-2);
+}
+.divDescription {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 18px;
+}
+.descLabel {
+    font-weight: var(--Bold);
+    font-size: var(--Body);
+    line-height: 22px;
+
+    margin-bottom: 12px;
+}
+
+input {
+    border: none;
+    border-radius: var(--Radius-default);
+
+    background-color: var(--Grey-0);
+}
+input::placeholder {
+    color: var(--Grey-3);
+
+    font-size: var(--Headline);
+}
+#description {
+    max-width: 100%;
+
+    padding: 13px 0 13px 16px;
+}
+.exampleInput {
+    margin-top: 5px;
+
+    font-weight: var(--Regular);
+    font-size: var(--Body);
+
+    color: var(--Grey-3);
+}
+.divValueAndType {
+    display: flex;
+    justify-content: space-between;
+}
+#value {
+    width: 112px;
+    height: 28px;
+
+    padding: 11px 0 11px 16px;
+}
+.typeOfCash {
+    position: relative;
+    bottom: 35px;
+    left: 95px;
+}
+#tipeValue {
+    cursor: pointer;
+
+    border: none;
+    border-radius: var(--Radius-default);
+
+    background-color: var(--Grey-0);
+
+    width: 100%;
+    height: 50px;
+
+    padding-left: 10px;
+
+    font-weight: var(--Regular);
+    font-size: var(--BtnHeader-size);
+}
+.divTypeValue {
+    width: 50%;
+}
+.primaryBtn {
+    width: 100%;
+}
+.card__section {
+    min-width: 100%;
+}
+@media (min-width: 425px) {
+    .card__section {
+        min-width: min-content;
+        max-width: 390px;
+    }
+}
+@media (min-width: 769px) {
+    .main__container {
+        margin-top: 40px;
+
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+@media (min-width: 1000px) {
+    .main__container {
+        gap: 60px;
+    }
+    .card__section {
+        max-width: 562px;
+    }
+    .form__container {
+        min-width: 363px;
+    }
+}

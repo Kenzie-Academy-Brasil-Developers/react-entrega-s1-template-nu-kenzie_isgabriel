@@ -1,0 +1,40 @@
+.section__pageContent {
+    padding-top: 84px;
+}
+.indexTitle {
+    color: var(--White-color);
+
+    margin-top: 30px;
+
+    font-weight: var(--Bold);
+    font-size: var(--Title1);
+    line-height: 48px;
+}
+.indexDescription {
+    color: var(--White-color);
+
+    margin-top: 28px;
+
+    font-weight: var(--Regular);
+    font-size: var(--Headline);
+}
+.divMainImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mainImg {
+    margin-top: 15px;
+    max-width: 100%;
+}
+
+@media (min-width: 500px) {
+    .section__pageContent {
+        max-width: 347px;
+    }
+    .mainImg {
+        width: 100%;
+        height: 593px;
+    }
+}

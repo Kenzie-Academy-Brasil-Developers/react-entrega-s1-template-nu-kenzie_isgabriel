@@ -1,0 +1,51 @@
+.cardLoading {
+    width: 100%;
+}
+.list__cards {
+    padding: 24px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.financeResume__div {
+    display: flex;
+    flex-direction: column;
+}
+.financeResume__div--title {
+    font-weight: var(--Bold);
+    font-size: var(--Title3);
+}
+.noListDiv {
+    display: flex;
+    flex-direction: column;
+}
+.noListFilter--title {
+    font-weight: var(--Bold);
+    font-size: var(--Title2);
+
+    margin-bottom: 20px;
+}
+@media (min-width: 375px) {
+    .list__cards {
+        width: 351px;
+    }
+}
+@media (min-width: 769px) {
+    .noListDiv {
+        gap: 27px;
+
+        margin-top: 32px;
+    }
+    .list__cards {
+        max-height: 57.6vh;
+
+        overflow-y: scroll;
+    }
+}
+@media (min-width: 1000px) {
+    .list__cards {
+        width: 568px;
+        max-width: 560px;
+    }
+}
