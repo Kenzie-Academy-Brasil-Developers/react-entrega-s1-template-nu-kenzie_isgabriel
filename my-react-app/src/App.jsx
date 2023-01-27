@@ -3,7 +3,7 @@ import { Dashboard } from "./components/Dashboard/Dashboard";
 import { IndexPage } from "./components/IndexPage/IndexPage";
 import "./reset.css";
 import "./globalStyles.css";
-import "./components/Button/Button.css";
+import "./components/Button/Button";
 import "./App.css";
 
 export const App = () => {
