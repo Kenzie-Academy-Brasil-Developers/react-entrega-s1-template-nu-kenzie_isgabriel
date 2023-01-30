@@ -1,6 +1,6 @@
-import { ButtonPrimary } from "../../Button/Button";
+import { ButtonPrimary } from "../Button/Button";
 import { useState } from "react";
-import { Select } from "../Select/Select";
+import { Select } from "./Select/Select";
 
 export function Form({ setListTransactions }) {
     const [description, setDescription] = useState("");
@@ -25,7 +25,7 @@ export function Form({ setListTransactions }) {
             setListTransactions((oldTrans) => [...oldTrans, newTrans]);
             setDescription("");
             setType("");
-            setValue("1");
+            setValue("");
         }
     }
     return (

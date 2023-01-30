@@ -87,7 +87,6 @@
     color: var(--Grey-0);
     transition: 0.5s;
 }
-
 @media (min-width: 769px) {
     .list__item,
     .type-entrada,

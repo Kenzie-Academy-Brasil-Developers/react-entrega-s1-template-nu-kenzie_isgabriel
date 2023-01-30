@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CardList } from "../CardList/CardList";
-import { Form } from "../Form/Inputs/Inputs";
+import { Form } from "../Form/Form";
 import { TotalMoney } from "../Form/Total/Total";
 import { Header } from "../Header/Header";
 import "./dashboard.css";

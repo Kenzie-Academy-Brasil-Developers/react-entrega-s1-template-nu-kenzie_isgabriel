@@ -8,9 +8,7 @@ export function Select({ type, setType }) {
             value={type}
             onChange={(event) => setType(event.target.value)}
         >
-            <option value="" hidden={true}>
-                Selecionar Tipo
-            </option>
+            <option hidden={true}>Selecionar</option>
             <option value="entrada">Entrada</option>
             <option value="saída">Saída</option>
         </select>
