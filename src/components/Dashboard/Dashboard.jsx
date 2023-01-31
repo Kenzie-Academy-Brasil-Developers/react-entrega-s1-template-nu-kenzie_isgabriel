@@ -15,7 +15,7 @@ export function Dashboard({ setStart }) {
 
     function removeTransition(transName) {
         const newList = listTransactions.filter(
-            (element) => element.description !== transName
+            (element, i) => i !== transName
         );
         setListTransactions(newList);
     }
